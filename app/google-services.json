@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1086373916870",
+    "project_id": "hashtagcollection-e4988",
+    "storage_bucket": "hashtagcollection-e4988.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086373916870:android:7e623f57fdf9ae980267c7",
+        "android_client_info": {
+          "package_name": "com.ecommerce.hashtagcollection"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1086373916870-l6ldtj6bq3no8q6f6poshbbfni8sdt2p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzbKGLauspLOs4GLoAX3cSmBQeT1_zUWY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1086373916870-l6ldtj6bq3no8q6f6poshbbfni8sdt2p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

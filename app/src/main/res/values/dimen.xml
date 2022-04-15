@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textSize_x1">30sp</dimen>
+
+    <dimen name="margin_x1">20dp</dimen>
+    <dimen name="margin_x2">10dp</dimen>
+    <dimen name="margin_x3">5dp</dimen>
+
+</resources>
