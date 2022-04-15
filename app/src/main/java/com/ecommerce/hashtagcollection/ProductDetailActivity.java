@@ -33,6 +33,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         cartItems = (TextView)findViewById(R.id.tvChangedItem);
         tvProductDescription = (TextView)findViewById(R.id.tvDescription);
         tvProductPrice = (TextView) findViewById(R.id.tvProductPrice);
+        increase = (ImageButton)findViewById(R.id.ibIncrease);
         decrease = (ImageButton)findViewById(R.id.ibDecrease);
         addToCart = (Button)findViewById(R.id.btAddToCart);
         registerUI();

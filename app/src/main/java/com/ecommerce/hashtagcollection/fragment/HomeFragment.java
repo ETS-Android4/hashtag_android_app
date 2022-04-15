@@ -20,8 +20,8 @@ import java.util.List;
 public class HomeFragment extends Fragment {
     private GridView gridViewHome;
     private GridAdapter gridAdapter;
-    private int[] images;
-    private String[] titles;
+    private int[] images = new int[14];
+    private String[] titles = new String[14];
 
 
     @Override
@@ -83,6 +83,11 @@ public class HomeFragment extends Fragment {
         testCartModels.add(new TestCartModel(0, "Chasma New ", "Mero new Chasma ho yr.", 50, 1000,R.drawable.pic13));
         testCartModels.add(new TestCartModel(0, "Chasma New ", "Mero new Chasma ho yr.", 50, 1000,R.drawable.pic14));
         testCartModels.add(new TestCartModel(0, "Chasma New ", "Mero new Chasma ho yr.", 50, 1000,R.drawable.pic15));
+
+        for(int i = 0; i<14; i++) {
+            images[i] = R.drawable.pic1;
+            titles[i] = "Product";
+        }
     }
 
     private void settingAdapter() {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -19,64 +19,132 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/app_name"
-            android:layout_alignParentTop="true"
             android:textSize="@dimen/textSize_x1"
             android:textAlignment="center"
             android:background="@color/grey"
             android:textColor="@color/white"
-            android:layout_centerHorizontal="true"
             android:padding="20dp"
             />
-
-        <ImageView
-            android:id="@+id/ivProductImage"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:layout_marginTop="@dimen/margin_x1"
-            android:layout_marginBottom="@dimen/margin_x2"
-            android:layout_gravity="center_horizontal" />
-
-        <TextView
-            android:id="@+id/tvProductTitle"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:textAlignment="center"
-            android:layout_gravity="center_horizontal"/>
-
-        <TextView
-            android:id="@+id/tvDescription"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fragmentCartConstraintLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_x2"
-            android:textAlignment="center"
-            android:layout_marginBottom="@dimen/margin_x2"
-            android:text="this is my discription."
-            android:layout_gravity="center_horizontal"
-            tools:ignore="RtlCompat" />
-        <TextView
-            android:id="@+id/tvProductPrice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin_x2"
-            android:textAlignment="center"
-            android:layout_marginBottom="@dimen/margin_x2"
-            android:text="Price: 1000 RS"
-            android:layout_gravity="center_horizontal"
-            tools:ignore="RtlCompat" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="@dimen/margin_x1"
-            >
-
-            <LinearLayout
+            android:layout_marginEnd="@dimen/margin_x2"
+            android:layout_gravity="end">
+            <ImageView
+                android:id="@+id/ivCartImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="@dimen/margin_x1"
+                android:layout_marginBottom="@dimen/margin_x2"
+                android:src = "@drawable/ic_baseline_shopping_cart_24"
+                app:layout_constraintTop_toTopOf="@id/fragmentCartConstraintLayout"
+                app:layout_constraintStart_toStartOf="@id/fragmentCartConstraintLayout"
+                />
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:text="10"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toTopOf="@id/ivCartImage"
+                app:layout_constraintRight_toRightOf="@id/ivCartImage"
+                android:background="@color/whiteGrey"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scrollbars="none"
+            android:scrollbarStyle="outsideOverlay"
+            android:layout_marginTop="@dimen/margin_x1"
+            android:layout_marginBottom="@dimen/margin_x1"
+            android:layout_weight="1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="@dimen/margin_x2"
+                android:paddingEnd="@dimen/margin_x2"
+                android:paddingBottom="@dimen/margin_x2"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/ivProductImage"
+                    android:layout_width="450dp"
+                    android:layout_height="400dp"
+                    android:scaleType="fitXY"
+                    android:layout_marginBottom="@dimen/margin_x2"
+                    android:layout_gravity="center_horizontal"
+                    />
+                <TextView
+                    android:id="@+id/tvProductTitle"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textSize="30sp"
+                    android:text="Product1"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    />
+                <TextView
+                    android:id="@+id/tvProductPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_x2"
+                    android:textAlignment="center"
+                    android:layout_marginBottom="@dimen/margin_x2"
+                    android:text="Price: 1000 RS"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    tools:ignore="RtlCompat" />
+
+                <TextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_x2"
+                    android:textAlignment="center"
+                    android:layout_marginBottom="@dimen/margin_x2"
+                    android:text="this is my discription.
+this is my discription.
+this is my discription.this is my discription.this is my discription.this is my discription.
+
+this is my discription.this is my discription.this is my discription.
+
+this is my discription.this is my discription.this is my discription.
+this is my discription.this is my discription.v
+
+this is my discription.this is my discription.this is my discription.
+
+this is my discription.this is my discription.this is my discription.
+
+this is my discription.this is my discription.this is my discription.
+
+this is my discription.this is my discription.this is my discription.
+
+this is my discription.this is my discription.this is my discription.v
+
+this is my discription.this is my discription.this is my discription.
+"
+                    android:textSize="15sp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    tools:ignore="RtlCompat" />
+
+            </LinearLayout>
+        </ScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:layout_gravity="center"
                 android:paddingLeft="10dp">
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
                 <ImageButton
                     android:id="@+id/ibIncrease"
                     android:layout_width="wrap_content"
@@ -110,21 +178,38 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/subtract"
                     />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
             </LinearLayout>
 
-            <Button
-                android:id="@+id/btAddToCart"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:backgroundTint="@color/grey"
-                android:text="Add to Cart"
-                android:layout_marginEnd="10dp"/>
-
-
-        </LinearLayout>
+                android:layout_gravity="bottom"
+                >
+                <Button
+                    android:id="@+id/btAddToCart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:backgroundTint="@color/grey"
+                    android:text="Add to Cart"
+                    android:layout_marginEnd="10dp"/>
+                <Button
+                    android:id="@+id/btnCheckout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:backgroundTint="@color/grey"
+                    android:text="Checkout"
+                    android:layout_marginEnd="10dp"/>
+            </LinearLayout>
     </LinearLayout>
-</ScrollView>
+</RelativeLayout>
 

@@ -1,10 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragmentCartConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_x2"
+        android:layout_gravity="end">
+        <EditText
+            android:id="@+id/fragmentSearch"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="search"
+            app:layout_constraintStart_toStartOf="@id/fragmentCartConstraintLayout"
+            app:layout_constraintTop_toTopOf="@id/fragmentCartConstraintLayout"
+
+            />
+
+        <ImageView
+            android:id="@+id/ivCartImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/ic_baseline_shopping_cart_24"
+            app:layout_constraintEnd_toEndOf="@id/fragmentCartConstraintLayout"
+            app:layout_constraintLeft_toLeftOf="@id/fragmentSearch"
+            app:layout_constraintTop_toTopOf="@id/fragmentCartConstraintLayout" />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="@id/ivCartImage"
+        app:layout_constraintRight_toRightOf="@id/ivCartImage"
+        android:background="@color/whiteGrey"
+        />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerCart"
