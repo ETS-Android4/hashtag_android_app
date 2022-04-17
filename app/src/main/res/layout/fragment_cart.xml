@@ -50,23 +50,23 @@
         tools:listitem="@layout/item_grid"
         tools:itemCount="3"
         />
+
     <TextView
+        android:id="@+id/tvCostOfProduct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Total cost : Rs 2000"
         android:textColor="@color/black"
         android:layout_margin="25dp"
         android:layout_gravity="end"
-        android:id="@+id/tvCostOfProduct"
         />
     <Button
+        android:id="@+id/ProceedToPay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/grey"
         android:text="Proceed to pay"
         android:layout_gravity="end"
         android:layout_margin="15dp"
-        android:id="@+id/ProceedToPay"
-
         />
 </LinearLayout>

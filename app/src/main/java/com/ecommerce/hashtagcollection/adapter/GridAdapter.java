@@ -13,7 +13,6 @@ import com.ecommerce.hashtagcollection.ProductDetailActivity;
 import com.ecommerce.hashtagcollection.R;
 
 public class GridAdapter extends BaseAdapter {
-
     int[] images;
     String[] titles;
     Context context;
