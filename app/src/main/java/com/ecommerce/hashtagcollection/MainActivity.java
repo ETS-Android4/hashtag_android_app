@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.annotation.SuppressLint;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
@@ -71,6 +72,11 @@ public class MainActivity extends AppCompatActivity {
             return false;
         };
         bottomNavigationView.setOnItemSelectedListener(onItemSelectedListener);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
     }
 }
 

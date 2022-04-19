@@ -25,7 +25,7 @@
         app:layout_constraintRight_toRightOf="@id/cartImage">
 
        <LinearLayout
-           android:layout_width="wrap_content"
+           android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:orientation="horizontal">
            <TextView
@@ -36,21 +36,23 @@
                android:text="Title of my product"/>
 
            <View
-               android:layout_width="54dp"
-               android:layout_height="0dp"/>
+               android:layout_width="0dp"
+               android:layout_height="0dp"
+               android:layout_weight="1"
+               />
 
            <Button
                android:id="@+id/cartDelete"
                android:layout_width="70dp"
                android:layout_height="40dp"
-               android:background="@drawable/btn_background"
                android:backgroundTint="@color/white"
                android:text="Delete"
                android:textColor="@color/red"
                android:textSize="8sp"
+               android:layout_marginLeft="10dp"
                />
-
        </LinearLayout>
+
         <TextView
             android:id="@+id/cartPaisa"
             android:layout_width="wrap_content"
@@ -68,36 +70,37 @@
 
             <ImageButton
                 android:id="@+id/cartIncrease"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:src="@drawable/add"
                 android:backgroundTint="@color/green"
                 />
 
             <View
-                android:layout_width="20dp"
+                android:layout_width="10dp"
                 android:layout_height="0dp"/>
 
             <TextView
-                android:id="@+id/cartQty"
+                android:id="@+id/cartItems"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="5"
                 android:textColor="@color/black"
-                android:textSize="@dimen/textSize_x1"
+                android:textSize="20sp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="@dimen/margin_x3"
                 android:layout_marginRight="@dimen/margin_x3"
+                android:layout_marginBottom="5dp"
                 />
 
             <View
-                android:layout_width="20dp"
+                android:layout_width="10dp"
                 android:layout_height="0dp"/>
 
             <ImageButton
                 android:id="@+id/cartDecrease"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:src="@drawable/subtract"
                 android:backgroundTint="@color/red"
                 />
@@ -105,8 +108,8 @@
                 android:id="@+id/cartUpdate"
                 android:layout_width="70dp"
                 android:layout_height="40dp"
-                android:background="@drawable/btn_background"
                 android:backgroundTint="@color/white"
+                android:layout_marginLeft="@dimen/margin_x2"
                 android:text="Update"
                 android:textColor="@color/green"
                 android:textSize="8sp"
