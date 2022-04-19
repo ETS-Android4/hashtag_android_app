@@ -6,9 +6,11 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 import android.widget.Toast;
 
 public class Login_Activity extends AppCompatActivity {
@@ -33,12 +35,6 @@ public class Login_Activity extends AppCompatActivity {
         signIn = (EditText) findViewById(R.id.etSignIn);
         login = (Button) findViewById(R.id.btnLogin);
 
-        if(email.length() > 0 ) {
-            sharedPreferences.edit().putString(Constants.EMAIL, email.toString()).apply();
-        }
-        if(password.length() > 0) {
-            sharedPreferences.edit().putString(Constants.PASSWORD, password.toString()).apply();
-        }
 
         login.setOnClickListener(view-> {
             Log.d(TAG, "Login btn clicked");
